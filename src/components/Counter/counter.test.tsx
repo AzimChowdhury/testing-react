@@ -21,20 +21,5 @@ describe('Counter()', () => {
         expect(counterValueElement).toHaveTextContent('1');
     });
 
-    // similar test just for testing purpose
-    it('Increase the counter value by 1 upon clicking on increment button', async () => {
-        user.setup();
-        render(
-            <Provider store={createStore()}>
-                <Counter />
-            </Provider>
-        );
 
-        const counterValueElement = screen.getByText('0');
-        const incrementButton = screen.getByText('Increment');
-
-        await user.click(incrementButton);
-
-        expect(counterValueElement).toHaveTextContent('1');
-    });
 });
