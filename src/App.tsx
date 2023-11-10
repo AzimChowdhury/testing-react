@@ -2,6 +2,7 @@ import './App.css'
 import FruitList from './components/FruitList/FruitList';
 import PrimaryButton from './components/PrimaryButton'
 import Users from './components/Users/User'
+import UserTable from './components/UsersTable/UsersTable';
 
 const fruits = ['apple', 'banana', 'orange', 'mango', 'pineapple'];
 export const users = [
@@ -19,6 +20,7 @@ function App() {
       {/* <PrimaryButton action='Add' />
       <PrimaryButton action='Delete' /> */}
       <Users />
+      <UserTable users={users} />
       <FruitList fruits={fruits} />
     </div>
   )
