@@ -1,5 +1,8 @@
 import './App.css'
+import Counter from './components/Counter/Counter';
+import FormComponent from './components/Form/Form';
 import FruitList from './components/FruitList/FruitList';
+import PrimaryButton from './components/PrimaryButton';
 import UserEvent from './components/UserEvent/UserEvent';
 import Users from './components/Users/User'
 import UserTable from './components/UsersTable/UsersTable';
@@ -17,12 +20,18 @@ function App() {
   return (
     <div>
       <h1>Hello World</h1>
-      {/* <PrimaryButton action='Add' />
-      <PrimaryButton action='Delete' /> */}
+      <PrimaryButton action='Add' />
+      <PrimaryButton action='Delete' />
       <Users />
       <UserTable users={users} />
       <FruitList fruits={fruits} />
       <UserEvent />
+      <FormComponent
+        onSubmit={(data) => {
+          console.log(data);
+        }}
+      />
+      <Counter />
     </div>
   )
 }
